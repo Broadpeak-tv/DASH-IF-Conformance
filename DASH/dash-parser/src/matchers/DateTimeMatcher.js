@@ -34,11 +34,11 @@
 import BaseMatcher from './BaseMatcher.js'
 import DashConstants from '../DashConstants.js'
 
-const SECONDS_IN_MIN = 60;
-const MINUTES_IN_HOUR = 60;
-const MILLISECONDS_IN_SECONDS = 1000;
+const SECONDS_IN_MIN = 60
+const MINUTES_IN_HOUR = 60
+const MILLISECONDS_IN_SECONDS = 1000
 
-const datetimeRegex = /^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2})(?::([0-9]*)(\.[0-9]*)?)?(?:([+-])([0-9]{2})(?::?)([0-9]{2}))?/;
+const datetimeRegex = /^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2})(?::([0-9]*)(\.[0-9]*)?)?(?:([+-])([0-9]{2})(?::?)([0-9]{2}))?/
 
 const DateTimeAttributes = [
     DashConstants.AVAILABILITY_START_TIME,
@@ -72,9 +72,9 @@ class DateTimeMatcher extends BaseMatcher {
                     utcDate += (match[8] === '+' ? -1 : +1) * timezoneOffset * SECONDS_IN_MIN * MILLISECONDS_IN_SECONDS
                 }
 
-                return new Date(utcDate)
+                return (new Date(utcDate)).getTime()
             }
-        );
+        )
     }
 }
 

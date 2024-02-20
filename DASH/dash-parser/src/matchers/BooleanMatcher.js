@@ -53,4 +53,4 @@ class BooleanMatcher extends BaseMatcher {
     }
 }
 
-export default BooleanMatcher;
+export default BooleanMatcher

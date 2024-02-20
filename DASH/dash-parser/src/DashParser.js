@@ -34,7 +34,7 @@ import DateTimeMatcher from './matchers/DateTimeMatcher.js'
 import NumericMatcher from './matchers/NumericMatcher.js'
 import BooleanMatcher from './matchers/BooleanMatcher.js'
 import * as tXml from './tXml.js'
-import X2JS from './xml2json';
+import X2JS from './xml2json'
 
 
 // List of node that shall be represented as arrays
@@ -119,9 +119,9 @@ class DashParser {
       enableToStringFunc: true,
       ignoreRoot: false,
       matchers: this.attrMatchers
-    });
+    })
 
-    const manifest = converter.xml_str2json(data);
+    const manifest = converter.xml_str2json(data)
   }
 }
 
